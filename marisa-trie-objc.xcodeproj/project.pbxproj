@@ -8,13 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		3845A4D31F644052007BEDB2 /* marisa_trie_objc.h in Headers */ = {isa = PBXBuildFile; fileRef = 3845A4D21F644052007BEDB2 /* marisa_trie_objc.h */; };
-		3845A4D51F644052007BEDB2 /* marisa_trie_objc.m in Sources */ = {isa = PBXBuildFile; fileRef = 3845A4D41F644052007BEDB2 /* marisa_trie_objc.m */; };
+		3845A4DF1F644214007BEDB2 /* libmarisa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3845A4DE1F644214007BEDB2 /* libmarisa.a */; };
+		3845A4E11F64446B007BEDB2 /* marisa_trie_objc.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3845A4E01F64446B007BEDB2 /* marisa_trie_objc.mm */; };
+		3845A4EB1F644C82007BEDB2 /* libmarisa-trie-objc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3845A4CF1F644052007BEDB2 /* libmarisa-trie-objc.a */; };
+		3845A4F41F6452CB007BEDB2 /* MarisaTrieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3845A4F31F6452CB007BEDB2 /* MarisaTrieTests.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3845A4EC1F644C82007BEDB2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3845A4C71F644052007BEDB2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3845A4CE1F644052007BEDB2;
+			remoteInfo = "marisa-trie-objc";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3845A4CF1F644052007BEDB2 /* libmarisa-trie-objc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libmarisa-trie-objc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3845A4D21F644052007BEDB2 /* marisa_trie_objc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = marisa_trie_objc.h; sourceTree = "<group>"; };
-		3845A4D41F644052007BEDB2 /* marisa_trie_objc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = marisa_trie_objc.m; sourceTree = "<group>"; };
+		3845A4DB1F6441DF007BEDB2 /* include */ = {isa = PBXFileReference; lastKnownFileType = folder; path = include; sourceTree = "<group>"; };
+		3845A4DC1F6441F5007BEDB2 /* lib */ = {isa = PBXFileReference; lastKnownFileType = folder; path = lib; sourceTree = "<group>"; };
+		3845A4DE1F644214007BEDB2 /* libmarisa.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmarisa.a; path = lib/libmarisa.a; sourceTree = "<group>"; };
+		3845A4E01F64446B007BEDB2 /* marisa_trie_objc.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = marisa_trie_objc.mm; sourceTree = "<group>"; };
+		3845A4E61F644C82007BEDB2 /* MarisaTrieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarisaTrieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3845A4EA1F644C82007BEDB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3845A4F31F6452CB007BEDB2 /* MarisaTrieTests.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = MarisaTrieTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -22,6 +41,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3845A4DF1F644214007BEDB2 /* libmarisa.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3845A4E31F644C82007BEDB2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3845A4EB1F644C82007BEDB2 /* libmarisa-trie-objc.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -31,8 +59,12 @@
 		3845A4C61F644052007BEDB2 = {
 			isa = PBXGroup;
 			children = (
+				3845A4DC1F6441F5007BEDB2 /* lib */,
+				3845A4DB1F6441DF007BEDB2 /* include */,
 				3845A4D11F644052007BEDB2 /* marisa-trie-objc */,
+				3845A4E71F644C82007BEDB2 /* MarisaTrieTests */,
 				3845A4D01F644052007BEDB2 /* Products */,
+				3845A4DD1F644214007BEDB2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -40,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				3845A4CF1F644052007BEDB2 /* libmarisa-trie-objc.a */,
+				3845A4E61F644C82007BEDB2 /* MarisaTrieTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -47,10 +80,27 @@
 		3845A4D11F644052007BEDB2 /* marisa-trie-objc */ = {
 			isa = PBXGroup;
 			children = (
+				3845A4E01F64446B007BEDB2 /* marisa_trie_objc.mm */,
 				3845A4D21F644052007BEDB2 /* marisa_trie_objc.h */,
-				3845A4D41F644052007BEDB2 /* marisa_trie_objc.m */,
 			);
 			path = "marisa-trie-objc";
+			sourceTree = "<group>";
+		};
+		3845A4DD1F644214007BEDB2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3845A4DE1F644214007BEDB2 /* libmarisa.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3845A4E71F644C82007BEDB2 /* MarisaTrieTests */ = {
+			isa = PBXGroup;
+			children = (
+				3845A4F31F6452CB007BEDB2 /* MarisaTrieTests.m */,
+				3845A4EA1F644C82007BEDB2 /* Info.plist */,
+			);
+			path = MarisaTrieTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,6 +134,24 @@
 			productReference = 3845A4CF1F644052007BEDB2 /* libmarisa-trie-objc.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		3845A4E51F644C82007BEDB2 /* MarisaTrieTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3845A4EE1F644C82007BEDB2 /* Build configuration list for PBXNativeTarget "MarisaTrieTests" */;
+			buildPhases = (
+				3845A4E21F644C82007BEDB2 /* Sources */,
+				3845A4E31F644C82007BEDB2 /* Frameworks */,
+				3845A4E41F644C82007BEDB2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3845A4ED1F644C82007BEDB2 /* PBXTargetDependency */,
+			);
+			name = MarisaTrieTests;
+			productName = MarisaTrieTests;
+			productReference = 3845A4E61F644C82007BEDB2 /* MarisaTrieTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -94,6 +162,10 @@
 				ORGANIZATIONNAME = "Dong Yuwei ";
 				TargetAttributes = {
 					3845A4CE1F644052007BEDB2 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+					3845A4E51F644C82007BEDB2 = {
 						CreatedOnToolsVersion = 8.3.3;
 						ProvisioningStyle = Automatic;
 					};
@@ -112,20 +184,47 @@
 			projectRoot = "";
 			targets = (
 				3845A4CE1F644052007BEDB2 /* marisa-trie-objc */,
+				3845A4E51F644C82007BEDB2 /* MarisaTrieTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3845A4E41F644C82007BEDB2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3845A4CB1F644052007BEDB2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3845A4D51F644052007BEDB2 /* marisa_trie_objc.m in Sources */,
+				3845A4E11F64446B007BEDB2 /* marisa_trie_objc.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3845A4E21F644C82007BEDB2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3845A4F41F6452CB007BEDB2 /* MarisaTrieTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3845A4ED1F644C82007BEDB2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3845A4CE1F644052007BEDB2 /* marisa-trie-objc */;
+			targetProxy = 3845A4EC1F644C82007BEDB2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		3845A4D61F644052007BEDB2 /* Debug */ = {
@@ -221,6 +320,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EXECUTABLE_PREFIX = lib;
+				HEADER_SEARCH_PATHS = $SOURCE_ROOT/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -229,6 +333,35 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EXECUTABLE_PREFIX = lib;
+				HEADER_SEARCH_PATHS = $SOURCE_ROOT/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/lib",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3845A4EF1F644C82007BEDB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				HEADER_SEARCH_PATHS = $SOURCE_ROOT/include;
+				INFOPLIST_FILE = MarisaTrieTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = us.erlang.MarisaTrieTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3845A4F01F644C82007BEDB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				HEADER_SEARCH_PATHS = $SOURCE_ROOT/include;
+				INFOPLIST_FILE = MarisaTrieTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = us.erlang.MarisaTrieTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -250,6 +383,14 @@
 			buildConfigurations = (
 				3845A4D91F644052007BEDB2 /* Debug */,
 				3845A4DA1F644052007BEDB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3845A4EE1F644C82007BEDB2 /* Build configuration list for PBXNativeTarget "MarisaTrieTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3845A4EF1F644C82007BEDB2 /* Debug */,
+				3845A4F01F644C82007BEDB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
